@@ -1,4 +1,4 @@
-# brain_games/scripts/engine.py
+# brain_games/games/engine.py
 #!/usr/bin/env python3
 
 import prompt

@@ -6,3 +6,6 @@
 
 ### Brain Calc Game Demo
 [![asciicast](https://asciinema.org/a/rDAyzOUUoUBFxp55l3nxHC4wT)](https://asciinema.org/a/rDAyzOUUoUBFxp55l3nxHC4wT)
+
+### Brain GCD game demonstration
+[![asciicast](https://asciinema.org/a/Fggm0Q8TmZzSt3OvfxYahjQNV)](https://asciinema.org/a/Fggm0Q8TmZzSt3OvfxYahjQNV)
