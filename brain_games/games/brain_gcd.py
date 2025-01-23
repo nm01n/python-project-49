@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
 # brain_games/games/brain_gcd.py
+#!/usr/bin/env python3
 
 import random
 import math

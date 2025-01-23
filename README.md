@@ -7,5 +7,8 @@
 ### Brain Calc Game Demo
 [![asciicast](https://asciinema.org/a/rDAyzOUUoUBFxp55l3nxHC4wT)](https://asciinema.org/a/rDAyzOUUoUBFxp55l3nxHC4wT)
 
-### Brain GCD game demonstration
+### Brain GCD Game Demo
 [![asciicast](https://asciinema.org/a/Fggm0Q8TmZzSt3OvfxYahjQNV)](https://asciinema.org/a/Fggm0Q8TmZzSt3OvfxYahjQNV)
+
+## Brain Progression Game Demo
+[![asciicast](https://asciinema.org/a/EPuoAOMf1kBFV3mIc9TkLyPMH.svg)](https://asciinema.org/a/EPuoAOMf1kBFV3mIc9TkLyPMH)
