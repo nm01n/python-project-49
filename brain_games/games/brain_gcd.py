@@ -10,7 +10,7 @@ def get_game_data():
     Generate question and correct answer for GCD game.
 
     Returns:
-        tuple: A tuple containing the question and correct GCD answer.
+        tuple: Question and correct GCD answer.
     """
     number1 = random.randint(1, 100)
     number2 = random.randint(1, 100)

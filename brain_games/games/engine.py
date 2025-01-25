@@ -9,8 +9,8 @@ def play_game(get_game_data, instruction):
     Run the game logic for brain games.
 
     Args:
-        get_game_data (callable): Function to generate game question and answer.
-        instruction (callable): Function to display game instructions.
+        get_game_data (func): Generates game question and answer.
+        instruction (func): Displays game instructions.
     """
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
@@ -27,7 +27,8 @@ def play_game(get_game_data, instruction):
 
         if user_answer != correct_answer:
             print(
-                f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'."
+                f"'{user_answer}' is wrong answer ;(. "
+                f"Correct answer was '{correct_answer}'."
             )
             print(f"Let's try again, {name}!")
             return

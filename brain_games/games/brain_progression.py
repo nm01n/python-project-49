@@ -9,7 +9,7 @@ def generate_progression():
     Generate an arithmetic progression with a hidden number.
 
     Returns:
-        tuple: A tuple containing the progression question and correct answer.
+        tuple: Progression question and correct answer.
     """
     length = 10
     start = random.randint(1, 100)

@@ -1,52 +1,30 @@
 #!/usr/bin/env python3
-"""Module for the Brain Progression game."""
+"""Module for the Brain Even game."""
 
 import random
-
-
-def generate_progression():
-    """
-    Generate an arithmetic progression with a hidden number.
-
-    Returns:
-        tuple: A tuple containing the progression question and correct answer.
-    """
-    length = random.randint(5, 10)
-    start = random.randint(1, 20)
-    step = random.randint(1, 10)
-
-    progression = [start + i * step for i in range(length)]
-    hidden_index = random.randint(0, length - 1)
-    correct_answer = str(progression[hidden_index])
-
-    progression_display = progression.copy()
-    progression_display[hidden_index] = ".."
-
-    question = " ".join(map(str, progression_display))
-
-    return question, correct_answer
+from brain_games.games.engine import play_game
 
 
 def get_game_data():
     """
-    Prepare game data for a single round.
+    Generate a random number and determine if it's even.
 
     Returns:
-        tuple: Game question and correct answer.
+        tuple: A tuple containing the number and its evenness.
     """
-    return generate_progression()
+    number = random.randint(1, 100)
+    correct_answer = "yes" if number % 2 == 0 else "no"
+    return str(number), correct_answer
 
 
-def game_instruction():
+def instruction():
     """Display game instructions."""
-    print("What number is missing in the progression?")
+    print('Answer "yes" if the number is even, otherwise answer "no".')
 
 
 def main():
-    """Run the Brain Progression game."""
-    from brain_games.games.engine import play_game
-
-    play_game(get_game_data, game_instruction)
+    """Run the Brain Even game."""
+    play_game(get_game_data, instruction)
 
 
 if __name__ == "__main__":

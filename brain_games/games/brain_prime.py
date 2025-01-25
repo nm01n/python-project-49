@@ -25,10 +25,10 @@ def is_prime(number):
 
 def generate_prime_challenge():
     """
-    Generate a number and determine whether it's prime.
+    Generate a number and its primality status.
 
     Returns:
-        tuple: A tuple containing the number as a string and its primality answer.
+        tuple: Number and primality answer.
     """
     number = random.randint(1, 100)
     correct_answer = "yes" if is_prime(number) else "no"

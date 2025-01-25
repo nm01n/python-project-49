@@ -9,7 +9,7 @@ def get_game_data():
     Generate a math expression and its solution.
 
     Returns:
-        tuple: A tuple containing the math expression and correct answer.
+        tuple: Expression and correct answer as a string.
     """
     number_1 = random.randint(1, 100)
     number_2 = random.randint(1, 100)
