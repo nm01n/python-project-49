@@ -1,33 +1,44 @@
-# brain_games/scripts/brain_calc.py
 #!/usr/bin/env python3
+"""Module for the Brain Calc game."""
 
-import prompt
 import random
-from brain_games.games.engine import play_game 
+
 
 def get_game_data():
+    """
+    Generate a math expression and its solution.
+
+    Returns:
+        tuple: A tuple containing the math expression and correct answer.
+    """
     number_1 = random.randint(1, 100)
     number_2 = random.randint(1, 100)
-    operators = ['+', '-', '*']
+    operators = ["+", "-", "*"]
     current_operator = random.choice(operators)
-    
-    expression = f'{number_1} {current_operator} {number_2}'
-    
-    if current_operator == '+':
+
+    expression = f"{number_1} {current_operator} {number_2}"
+
+    if current_operator == "+":
         correct_answer = number_1 + number_2
-    elif current_operator == '-':
+    elif current_operator == "-":
         correct_answer = number_1 - number_2
     else:
         correct_answer = number_1 * number_2
-    
+
     return expression, str(correct_answer)
 
+
 def instruction():
-    print('What is the result of the expression?')
+    """Display game instructions."""
+    print("What is the result of the expression?")
+
 
 def main():
-    """Script entry point."""
+    """Run the Brain Calc game."""
+    from brain_games.games.engine import play_game
+
     play_game(get_game_data, instruction)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
