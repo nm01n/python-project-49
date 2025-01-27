@@ -1,42 +1,29 @@
 #!/usr/bin/env python3
-"""Module for the Brain Calc game."""
+"""Module for the Brain Even game."""
 
 import random
+from brain_games.games.engine import play_game
 
 
 def get_game_data():
     """
-    Generate a math expression and its solution.
+    Generate a random number and determine if it's even.
 
     Returns:
-        tuple: Expression and correct answer as a string.
+        tuple: A tuple containing the number and its evenness.
     """
-    number_1 = random.randint(1, 100)
-    number_2 = random.randint(1, 100)
-    operators = ["+", "-", "*"]
-    current_operator = random.choice(operators)
-
-    expression = f"{number_1} {current_operator} {number_2}"
-
-    if current_operator == "+":
-        correct_answer = number_1 + number_2
-    elif current_operator == "-":
-        correct_answer = number_1 - number_2
-    else:
-        correct_answer = number_1 * number_2
-
-    return expression, str(correct_answer)
+    number = random.randint(1, 100)
+    correct_answer = "yes" if number % 2 == 0 else "no"
+    return str(number), correct_answer
 
 
 def instruction():
     """Display game instructions."""
-    print("What is the result of the expression?")
+    print('Answer "yes" if the number is even, otherwise answer "no".')
 
 
 def main():
-    """Run the Brain Calc game."""
-    from brain_games.games.engine import play_game
-
+    """Run the Brain Even game."""
     play_game(get_game_data, instruction)
 
 
