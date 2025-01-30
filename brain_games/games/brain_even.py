@@ -2,7 +2,6 @@
 """Module for the Brain Even game."""
 
 import random
-from brain_games.games.engine import play_game
 
 
 def get_game_data():
@@ -19,13 +18,4 @@ def get_game_data():
 
 def instruction():
     """Display game instructions."""
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-
-
-def main():
-    """Run the Brain Even game."""
-    play_game(get_game_data, instruction)
-
-
-if __name__ == "__main__":
-    main()
+    return 'Answer "yes" if the number is even, otherwise answer "no".'

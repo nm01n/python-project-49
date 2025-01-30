@@ -4,6 +4,9 @@
 import prompt
 
 
+ROUNDS_COUNT = 3
+
+
 def play_game(get_game_data, instruction):
     """
     Run the game logic for brain games.
@@ -16,10 +19,9 @@ def play_game(get_game_data, instruction):
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
 
-    instruction()
-    rounds_count = 3
+    print(instruction())
 
-    for _ in range(rounds_count):
+    for _ in range(ROUNDS_COUNT):
         question, correct_answer = get_game_data()
         print(f"Question: {question}")
 

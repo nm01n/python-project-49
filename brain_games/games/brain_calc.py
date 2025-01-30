@@ -4,6 +4,32 @@
 import random
 
 
+MIN_GEN_NUMBER = 1
+MAX_GEN_NUMBER = 100
+OPERATORS = ("+", "-", "*")
+
+
+def calculate(number1, number2, operator):
+    """
+    Calculate the result of arithmetic operation.
+
+    Args:
+        number1: First number
+        number2: Second number
+        operator: String with arithmetic operator ('+', '-', '*')
+
+    Returns:
+        int: Result of the operation
+    """
+    if operator == "+":
+        return number1 + number2
+    if operator == "-":
+        return number1 - number2
+    if operator == "*":
+        return number1 * number2
+    raise ValueError(f"Unknown operator: {operator}")
+
+
 def get_game_data():
     """
     Generate a math expression and its solution.
@@ -11,34 +37,16 @@ def get_game_data():
     Returns:
         tuple: Expression and correct answer as a string.
     """
-    number_1 = random.randint(1, 100)
-    number_2 = random.randint(1, 100)
-    operators = ["+", "-", "*"]
-    current_operator = random.choice(operators)
+    number_1 = random.randint(MIN_GEN_NUMBER, MAX_GEN_NUMBER)
+    number_2 = random.randint(MIN_GEN_NUMBER, MAX_GEN_NUMBER)
+    current_operator = random.choice(OPERATORS)
 
     expression = f"{number_1} {current_operator} {number_2}"
-
-    if current_operator == "+":
-        correct_answer = number_1 + number_2
-    elif current_operator == "-":
-        correct_answer = number_1 - number_2
-    else:
-        correct_answer = number_1 * number_2
+    correct_answer = calculate(number_1, number_2, current_operator)
 
     return expression, str(correct_answer)
 
 
 def instruction():
-    """Display game instructions."""
-    print("What is the result of the expression?")
-
-
-def main():
-    """Run the Brain Calc game."""
-    from brain_games.games.engine import play_game
-
-    play_game(get_game_data, instruction)
-
-
-if __name__ == "__main__":
-    main()
+    """Return game instructions."""
+    return "What is the result of the expression?"

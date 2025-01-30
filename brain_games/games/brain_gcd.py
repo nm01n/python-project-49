@@ -23,15 +23,4 @@ def get_game_data():
 
 def instruction():
     """Display game instructions."""
-    print("Find the greatest common divisor of given numbers.")
-
-
-def main():
-    """Run the Brain GCD game."""
-    from brain_games.games.engine import play_game
-
-    play_game(get_game_data, instruction)
-
-
-if __name__ == "__main__":
-    main()
+    return "Find the greatest common divisor of given numbers."

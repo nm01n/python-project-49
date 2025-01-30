@@ -4,27 +4,26 @@
 import random
 
 
-def generate_progression():
+MIN_START_NUMBER = 1
+MAX_START_NUMBER = 100
+MIN_STEP_NUMBER = 1
+MAX_STEP_NUMBER = 10
+PROGRESSION_LENGTH = 10
+
+
+def generate_progression(start, step, length):
     """
-    Generate an arithmetic progression with a hidden number.
+    Generate an arithmetic progression.
+
+    Args:
+        start: First number in progression
+        step: Difference between consecutive numbers
+        length: Length of progression
 
     Returns:
-        tuple: Progression question and correct answer.
+        list: Generated arithmetic progression
     """
-    length = 10
-    start = random.randint(1, 100)
-    step = random.randint(1, 10)
-
-    progression = [start + i * step for i in range(length)]
-    hidden_index = random.randint(0, length - 1)
-    correct_answer = str(progression[hidden_index])
-
-    progression_display = progression.copy()
-    progression_display[hidden_index] = ".."
-
-    question = " ".join(map(str, progression_display))
-
-    return question, correct_answer
+    return [start + i * step for i in range(length)]
 
 
 def get_game_data():
@@ -34,20 +33,20 @@ def get_game_data():
     Returns:
         tuple: Game question and correct answer.
     """
-    return generate_progression()
+    start = random.randint(MIN_START_NUMBER, MAX_START_NUMBER)
+    step = random.randint(MIN_STEP_NUMBER, MAX_STEP_NUMBER)
+
+    progression = generate_progression(start, step, PROGRESSION_LENGTH)
+    hidden_index = random.randint(0, PROGRESSION_LENGTH - 1)
+    correct_answer = str(progression[hidden_index])
+
+    progression_display = progression.copy()
+    progression_display[hidden_index] = ".."
+    question = " ".join(map(str, progression_display))
+
+    return question, correct_answer
 
 
 def game_instruction():
-    """Display game instructions."""
-    print("What number is missing in the progression?")
-
-
-def main():
-    """Run the Brain Progression game."""
-    from brain_games.games.engine import play_game
-
-    play_game(get_game_data, game_instruction)
-
-
-if __name__ == "__main__":
-    main()
+    """Return game instructions."""
+    return "What number is missing in the progression?"
