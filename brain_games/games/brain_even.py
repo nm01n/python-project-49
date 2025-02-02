@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Module for the Brain Even game."""
 
 import random

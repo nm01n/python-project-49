@@ -14,6 +14,7 @@ Brain Games is a set of five console-based mathematical mini-games to test and i
 ## Installation
 ```bash
 pip install --user git+https://github.com/nm01n/python-project-49.git
+```
 
 ### Brain Even Game Demo
 [![asciicast](https://asciinema.org/a/bFL3QZaLPRTRfVyc3O9wzloSA)](https://asciinema.org/a/bFL3QZaLPRTRfVyc3O9wzloSA)

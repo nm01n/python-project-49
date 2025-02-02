@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Script to run the Brain GCD game."""
 
 from brain_games.games.brain_gcd import get_game_data, instruction
